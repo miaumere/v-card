@@ -1,0 +1,140 @@
+:root {
+  --main-color: #1e1e1e;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  color-scheme: dark;
+
+  font-family: "Source Code Pro", serif;
+  font-size: 24px;
+
+  color: plum;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: var(--main-color);
+}
+
+@media all and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 508px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+*::selection {
+  color: var(--main-color);
+  background: white;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 3rem;
+  color: cyan;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0.5rem;
+}
+
+.subtitle {
+  color: magenta;
+  font-size: 2rem;
+}
+
+.technologies {
+  display: block;
+  border: grey 2px dashed;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.technologies__title {
+  color: yellow;
+}
+.technologies__list {
+  list-style-type: "♡ ";
+}
+
+.pages-title {
+  color: yellow;
+}
+
+.description,
+.subtitle {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+/*#region mark styles */
+.mark {
+  color: white;
+  opacity: 0.5;
+}
+
+.mark::before {
+  content: "<";
+}
+
+.mark::after {
+  content: ">";
+}
+
+.mark--closing::after {
+  content: "/>";
+}
+
+/*#endregion */
+
+/*#region links styles */
+.links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.link {
+  margin: 0.5rem;
+}
+
+.link__item {
+  cursor: pointer;
+}
+.link__item--cv {
+  color: cyan;
+}
+.link__item:hover {
+  color: var(--main-color);
+}
+
+.link__item--cv:hover {
+  background: cyan;
+}
+
+.link__item--li {
+  color: blue;
+}
+
+.link__item--li:hover {
+  background: blue;
+}
+
+.link__item--gh {
+  color: magenta;
+}
+
+.link__item--gh:hover {
+  background: magenta;
+}
+/*#endregion */
