@@ -92,8 +92,8 @@ body {
   content: ">";
 }
 
-.mark--closing::after {
-  content: "/>";
+.mark--closing::before {
+  content: "</";
 }
 
 /*#endregion */
